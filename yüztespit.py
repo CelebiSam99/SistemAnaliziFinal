@@ -52,10 +52,10 @@ while True:
             id = "bilinmiyor"
             uyum = "bilinmiyor"+f"=  {round(uyum,100)}%"
             konu='GuvenliK Uyarisi Bilinmeyen kisi'
-            rapor = "ACIL!!!: {}\n\n{}\n\n{}".format(konu,id,time.strftime("%a, %d %b %Y %H:%M:%S"))
-            with smtplib.SMTP_SSL("smtp.gmail.com",465) as server:
-                server.login(gonderenmail,gonderensifre)
-                server.sendmail(gonderenmail,alicimail,rapor)
+            rapor = "ACIL!!!: {}\n\n{}\n\n{}".format(konu,id,time.strftime("%a, %d %b %Y %H:%M:%S"))#bilinmeyen kişinin giriş zamanını kayıt ediyor
+            with smtplib.SMTP_SSL("smtp.gmail.com",465) as server: #smtplib servere ayarlıyoruz
+                server.login(gonderenmail,gonderensifre) 
+                server.sendmail(gonderenmail,alicimail,rapor)  
             GPIO.output(Role,GPIO.LOW)#eğer yanlış  ise role yi kapat
 
         cv2.putText(img, str(id), (x+5,y-5),cv2.FONT_HERSHEY_SIMPLEX , 1, (255,255,255), 2)#Kişinin adı yazılıyor
