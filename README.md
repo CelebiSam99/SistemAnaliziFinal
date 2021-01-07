@@ -7,7 +7,7 @@
 
 # YOUTUBE
 
-### [Video Anlatım](https://studio.youtube.com/video/xfXq3NdZI3M/edit)
+### [Video Anlatım](https://www.youtube.com/)
 
 # Slayt
 
