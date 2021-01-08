@@ -5,7 +5,7 @@ kamera.set(3, 640) # video genişliğini belirle
 kamera.set(4, 480) # video yüksekliğini belirle
 face_detector = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')#haarcascade kullanılarak yüz belirleniyor
 
-veri = 50 #çekeceğimiz fotoğraf(veri) adadeini yazıyoruz
+veri = 60 #çekeceğimiz fotoğraf(veri) adadeini yazıyoruz
 
 
 face_id = 1 #veri kaçıncı kişiye ait 
@@ -27,7 +27,7 @@ while(True):
 
     if cv2.waitKey(10)  == ord ('q') and cv2.waitKey(0):
         break     
-    elif say >= veri: #ya yukarıda tanımladığımız gibi q ve say 50 eşit ve büyük ise kapan
+    elif say >= veri: #ya yukarıda tanımladığımız gibi q ve say 60 eşit ve büyük ise kapan
         break
 
 kamera.release()
